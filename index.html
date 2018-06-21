@@ -26,7 +26,7 @@
       Hi! I'm
       <span class="fullName">
         <span class="full"> Aun Nur&nbsp;</span>
-        <span class="nick">Sakkhor</span>
+        <span class="nick">Sakkhor.</span>
       </span>
       <span>A Brand Identity Designer.</span>
       <span>Currently learning UI/UX to Do More.</span>
@@ -199,7 +199,11 @@
       $(window).bind("load", function(){
         $(nick).animate({
           "left": "100%"
-        }, (200 - $(nick).position().left) * 10, "easeOutBounce", close)
+        }, (200 - $(nick).position().left) * 5, "swing", function(){
+          setTimeout(()=>{
+            close();
+          }, 1000)
+        })
       });
 
 
@@ -207,7 +211,7 @@
       function expand() {
         $(nick).animate({
           "left": "100%"
-        }, (200 - $(nick).position().left) * 10, "easeOutBounce")
+        }, (200 - $(nick).position().left) * 5, "swing")
       }
 
       function close() {
