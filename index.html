@@ -196,14 +196,13 @@
       	close();
       });
 
-      $(window).bind("load", function(){
-        $(nick).animate({
-          "left": "100%"
-        }, (200 - $(nick).position().left) * 5, "swing", function(){
-          setTimeout(()=>{
-            close();
-          }, 1000)
-        })
+      
+      $(nick).animate({
+        "left": "100%"
+      }, (200 - $(nick).position().left) * 5, "swing", function(){
+        setTimeout(()=>{
+          close();
+        }, 1000)
       });
 
 
